@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="custom_edit_text" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:drawableRight">@drawable/ic_baseline_arrow_right_24</item>
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:textColor">@color/small_text_gray</item>
+        <item name="android:textColorHint">@color/small_text_gray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:background">@drawable/et_color_radius</item>
+    </style>
+
+    <style name="custom_edit_text.Policy" parent="custom_edit_text">
+        <item name="android:hint">Policy</item>
+    </style>
+
+    <style name="custom_edit_text.ProductCategory" parent="custom_edit_text">
+        <item name="android:hint">ProductCategory</item>
+    </style>
+
+    <style name="custom_edit_text.OriginCountry" parent="custom_edit_text">
+        <item name="android:hint">OriginCountry</item>
+    </style>
+
+    <style name="custom_edit_text.Brand" parent="custom_edit_text">
+        <item name="android:hint">Brand</item>
+    </style>
+
+    <style name="custom_text_view">
+        <item name="android:elevation">2dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/action_bar_main_text_gray</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="custom_text_view.Policies" parent="custom_text_view">
+        <item name="android:text">Policies</item>
+    </style>
+
+    <style name="custom_text_view.CurrentPolicies" parent="custom_text_view">
+        <item name="android:text">Current Policies</item>
+    </style>
+</resources>

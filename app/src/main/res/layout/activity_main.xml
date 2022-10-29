@@ -4,5 +4,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_almost_white"
     tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/include_action_bar"
+        layout="@layout/custom_action_bar" />
+
+    <TextView
+        android:id="@+id/tv_policies"
+        style="@style/custom_text_view.Policies"
+        android:paddingTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_action_bar" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_policy"
+        style="@style/custom_edit_text.Policy"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_policies"
+        android:inputType="number"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_product_category"
+        style="@style/custom_edit_text.ProductCategory"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_policy"
+        android:inputType="number"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_origin_country"
+        style="@style/custom_edit_text.OriginCountry"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_product_category"
+        android:inputType="text"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_brand"
+        style="@style/custom_edit_text.Brand"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_origin_country"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/tv_current_policies"
+        style="@style/custom_text_view.CurrentPolicies"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_brand" />
+
+    <com.google.android.material.button.MaterialButton
+        android:enabled="false"
+        android:id="@+id/btn_export_as_csv"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/export_button_red"
+        android:elevation="20dp"
+        android:insetTop="1dp"
+        android:insetBottom="0dp"
+        android:text="@string/btn_export_as_csv"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_policies" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_country_of_origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
+        android:text="Country of Origin"
+        android:textColor="@color/small_text_gray"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bottom_navigation"
+        app:layout_constraintEnd_toStartOf="@id/tv_product_category"
+        app:layout_constraintStart_toStartOf="@id/iv_bottom_navigation" />
+
+    <TextView
+        android:id="@+id/tv_product_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
+        android:text="Product Category"
+        android:textColor="@color/small_text_gray"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bottom_navigation"
+        app:layout_constraintEnd_toEndOf="@id/iv_bottom_navigation"
+        app:layout_constraintStart_toEndOf="@id/tv_country_of_origin" />
+
+    <ImageView
+        android:id="@+id/dot1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/dots_radius"
+        app:layout_constraintEnd_toStartOf="@id/dot2"
+        app:layout_constraintStart_toStartOf="@id/iv_bottom_navigation"
+        app:layout_constraintTop_toTopOf="@id/iv_bottom_navigation" />
+
+    <ImageView
+        android:id="@+id/dot2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/dots_radius"
+        app:layout_constraintEnd_toStartOf="@id/dot3"
+        app:layout_constraintStart_toEndOf="@id/dot1"
+        app:layout_constraintTop_toTopOf="@id/iv_bottom_navigation" />
+
+    <ImageView
+        android:id="@+id/dot3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="165dp"
+        android:background="@drawable/dots_radius"
+        android:backgroundTint="@color/background_almost_white"
+        app:layout_constraintEnd_toEndOf="@id/iv_bottom_navigation"
+        app:layout_constraintStart_toEndOf="@id/dot2"
+        app:layout_constraintTop_toTopOf="@id/iv_bottom_navigation" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
